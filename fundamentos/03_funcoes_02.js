@@ -6,3 +6,18 @@ const fazerCha = function(erva){
 }
 
 fazerCha("erva cidreira")
+
+
+// usando arrow para reduz a sintaxe. =>
+
+const pintarCabelo = (cor) => {
+  return console.log("pintando o cabelo com a cor S(o_o)S", cor)
+}
+
+pintarCabelo("preto")
+
+// return implicito
+
+let nadar = (meio) => console.log("nadando em", meio)
+
+nadar("gelatina")
