@@ -12,6 +12,9 @@ const imprimeGrauProtecao = function (fps){
   else if(fps.entre(40, 100)){
     console.log('Fator de proteção alto')
   }
+  else{
+    console.log('O valor inserido é inválido')
+  }
   }
 
-  imprimeGrauProtecao(30)
+  imprimeGrauProtecao(-15)
