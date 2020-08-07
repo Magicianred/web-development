@@ -18,7 +18,7 @@ condição ? expressão_1 : expressão_2
 function combinacoes(a, b, c){
   a = a !== undefined ? a : 1 // se a é estritamente diferente de undefined assume valor a, else assume 1
   b = 1 in arguments ? b : 1
-  c = isNaN(c) ? 1 : c
+  c = isNaN(c) ? 1 : c // mais segura das três
   return a + b + c
 
 }
