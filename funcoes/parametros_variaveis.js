@@ -1,5 +1,7 @@
 function soma(){
   let soma = 0
+
+  // arguments é o array de parametros total recebido pela funcao, existe outra opção mais recente
   for(i in arguments){
     soma += arguments[1]
   }
