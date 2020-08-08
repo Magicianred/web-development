@@ -23,3 +23,5 @@ function Pirata(nome){
 
 const lethalLissy = new Pirata('Letal Lissy')
 lethalLissy.falar()
+
+// é possível criar objetos por meio de função construtora, classe, funcao factory
