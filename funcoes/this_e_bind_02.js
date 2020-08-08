@@ -16,7 +16,7 @@ Duas formas de declarar a qual objeto esta se referindo
 function distanceSkill(){
   this.skill = 0
 
-  const self = this
+  const self = this // se refere ao this do escopo
 
 
   setInterval(function (){
