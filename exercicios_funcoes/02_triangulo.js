@@ -7,15 +7,21 @@ triângulo).
 */
 
 const verificaTriangulo = function(lado_a, lado_b, lado_c){
+
   if(lado_a === lado_b === lado_c){
     return 'Equilátero'
-  }else{
+
+  }
+  else{
+
     if(lado_a === lado_b ||lado_a === lado_c || lado_c === lado_b){
       return 'Isósceles'
+
     }
     else{
+
       return 'Escaleno'
-    }
+      }
     }
   }
 
