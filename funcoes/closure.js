@@ -4,15 +4,18 @@ contexto léxico em ação
  */
 
 
-const globo =  'Global'
+const x =  'Global'
 
 function fora(){
-  const globo = 'Local'
+  const x = 'Local'
   function dentro(){
-    return globo
+    return x
   }
   return dentro
 }
 
-const meuGlobinho = fora()
-console.log(meuGlobinho())
+
+const armazenarFora = fora()
+console.log(armazenarFora())
+// o retorno será 'local', pois no escopo onde a funcao fora foi criada
+// a variavel x foi declarada como 'local'
