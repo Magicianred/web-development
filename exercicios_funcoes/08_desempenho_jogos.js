@@ -11,12 +11,24 @@ Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontu
 aconteceu no sétimo jogo.)
 */
 
-const lista_pontuacao = [10, 20, 20, 8, 25, 3, 0, 30, 1]
 
-const menor_valor = Math.min(lista_pontuacao)
-const index_menor_valor = lista_pontuacao.indexOf(menor_valor)
+stringExercicio =  "10 20 20 8 25 3 0 30 1"
+let pontuacoes_e_partidas = stringExercicio.split(" ")
 
 
-console.log(lista_pontuacao)
-console.log(menor_valor)
-console.log(index_menor_valor)
+const menor_valor = "" + Math.min(...pontuacoes_e_partidas)
+const index_menor_valor = pontuacoes_e_partidas.indexOf(menor_valor)
+
+
+console.log('A menor pontuação é', menor_valor,'na', index_menor_valor, 'jogada')
+
+maiores = []
+
+for(i in pontuacoes_e_partidas){
+  console.log(pontuacoes_e_partidas[i])
+    if(pontuacoes_e_partidas[i] > pontuacoes_e_partidas[i]){
+      maiores.push(pontuacoes_e_partidas[i])
+    }
+  }
+
+console.log(maiores)
