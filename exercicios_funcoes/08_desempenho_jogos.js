@@ -13,22 +13,29 @@ aconteceu no sétimo jogo.)
 
 
 stringExercicio =  "10 20 20 8 25 3 0 30 1"
+
 let pontuacoes_e_partidas = stringExercicio.split(" ")
 
 
 const menor_valor = "" + Math.min(...pontuacoes_e_partidas)
+const maior_valor = "" + Math.max(...pontuacoes_e_partidas)
 const index_menor_valor = pontuacoes_e_partidas.indexOf(menor_valor)
+const index_maior_valor = pontuacoes_e_partidas.indexOf(maior_valor)
+const primeiro_maior_valor = maior_valor // primeiro array
+todos_arrays = []
+let ultrapassou = 0
 
 
 console.log('A menor pontuação é', menor_valor,'na', index_menor_valor, 'jogada')
+console.log('A maior pontuação é', maior_valor,'na', index_maior_valor, 'jogada')
 
-maiores = []
 
-for(i in pontuacoes_e_partidas){
-  console.log(pontuacoes_e_partidas[i])
-    if(pontuacoes_e_partidas[i] > pontuacoes_e_partidas[i]){
-      maiores.push(pontuacoes_e_partidas[i])
-    }
+for(let item in todos_arrays){
+    if(todos_arrays[i] > primeiro_maior_valor){
+        ultrapassou++
+    return console.log(ultrapassou)
   }
-
-console.log(maiores)
+}
+// formar um array de todas as partidas, comparando o maior valor da primeira partida
+// com os demais valores de todas as outras partidas, e assim terá quantas vezes ultrapassou
+// o maximo
