@@ -12,11 +12,11 @@ aconteceu no sétimo jogo.)
 */
 
 
-stringExercicio =  "10 20 20 8 25 3 0 30 1"
+let stringExercicio =  "10 20 20 8 25 3 0 30 1"
+
+const desempenhoJogos = function(stringExercicio){
 
 let pontuacoes_e_partidas = stringExercicio.split(" ")
-
-
 const menor_valor = "" + Math.min(...pontuacoes_e_partidas)
 const maior_valor = "" + Math.max(...pontuacoes_e_partidas)
 const index_menor_valor = pontuacoes_e_partidas.indexOf(menor_valor)
@@ -35,7 +35,11 @@ for(let item in todos_arrays){
         ultrapassou++
     return console.log(ultrapassou)
   }
+ }
 }
+
+console.log(desempenhoJogos(stringExercicio))
+
 // formar um array de todas as partidas, comparando o maior valor da primeira partida
 // com os demais valores de todas as outras partidas, e assim terá quantas vezes ultrapassou
 // o maximo
