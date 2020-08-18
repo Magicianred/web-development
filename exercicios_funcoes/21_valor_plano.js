@@ -10,13 +10,13 @@ const valorPlanoSaude = function(idade){
       return console.log("Valor a ser pago (idade menor que 10 anos) R$:", (100+80))
     }
     else{
-      if(idade >=10 && idade <= 30){
-        return console.log("Valor a ser pago(idade entre 10 e 30 anos) R$:", (100+50))
-      }else{
-         if(idade > 30 && idade <= 60){
-           return console.log("Valor a ser pago(idade entre 30 a 60 anos) R$:", (100+95))
-      }else{
-        return console.log("Valor a ser pago(maior 60 anos) R$:", (100+130))
+        if(idade >=10 && idade <= 30){
+            return console.log("Valor a ser pago(idade entre 10 e 30 anos) R$:", (100+50))
+        }else{
+              if(idade > 30 && idade <= 60){
+                  return console.log("Valor a ser pago(idade entre 30 a 60 anos) R$:", (100+95))
+              }else{
+                  return console.log("Valor a ser pago(maior 60 anos) R$:", (100+130))
       }
     }
   }
