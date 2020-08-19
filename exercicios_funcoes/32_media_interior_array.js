@@ -15,4 +15,4 @@ const mediaIntVetor = function(vetor){
       return 'Média dos valores do array: ' + (total/contaInt)
 }
 
-console.log(mediaIntVetor([6,8,10]))
+console.log(mediaIntVetor([6,"a",10]))
