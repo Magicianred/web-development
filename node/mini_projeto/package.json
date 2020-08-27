@@ -1,0 +1,14 @@
+{
+  "name": "mini_projeto",
+  "version": "1.0.0",
+  "description": "mini projeto para teste do node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "camila bodack",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.17.1"
+  }
+}
