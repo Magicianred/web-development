@@ -1,15 +1,22 @@
 const sequence = {
-  id:1,
+  _id:1,
   get(){
-    return this.id++
+    return this._id++
   }
 }
 
 const produtos = {}
 
-function salvarProduto(){
-  if(!produto.id) produto.id = sequence.id
+function salvarProduto(produto){
+  /*if(!produto.id) produto.id = sequence.id
   produtos[produto.id] = produto
+  return produto
+  */
+  if(produto.id === undefined){
+    produto.id = sequence.id
+  }else{
+    produtos[produto.id] = produto
+  }
   return produto
 }
 
@@ -23,4 +30,4 @@ function getProdutos(){
 }
 
 // exportando esse módulo
-module.exports = {salvarProduto, getProduto, getProdutos}
+module.exports = { salvarProduto, getProduto, getProdutos}
