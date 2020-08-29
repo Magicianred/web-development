@@ -8,10 +8,6 @@ const sequence = {
 const produtos = {}
 
 function salvarProduto(produto){
-  /*if(!produto.id) produto.id = sequence.id
-  produtos[produto.id] = produto
-  return produto
-  */
   if(produto.id === undefined){
     produto.id = sequence.id
   }else{
