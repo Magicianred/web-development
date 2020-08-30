@@ -11,3 +11,7 @@ function primeiroElemento(array){
 function primeiraLetra(string){
     return string[0]
 }
+
+promessa
+.then(primeiroElemento)
+.then(primeiraLetra)
