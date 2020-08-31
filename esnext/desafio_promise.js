@@ -5,22 +5,21 @@ o resultado da promise deve ser o conteúdo do arquivo
 
 // Load the fs class using the require command
 
-let fs = require('fs')
-let path = require('path')
-
-const caminho = path.join(__dirname, 'desafio_leitura.txt')
 /*
 Then we call the readFile method that gets 3 parameters:
 The name of the file ('DATA' in this case),
 the encoding of the file ('utf8' in the examples), and a function
 */
 
-let a = fs.readFile(caminho, 'utf-8', function(_, contents){
-    return new Promise(conteudo => console.log("Conteúdo lido"))
-    .then(conteudo => conteudo.toString())
-})
+/*
+ async
+let fs = require('fs')
+let leitura = async() => {
+    const conteudo = await(fs.readFile('./desafio_leitura.txt', 'utf-8'))
+    .then(conteudo.toString())
+}
 
-a(caminho)
+*/
 
 /*
 function(caminho){
@@ -33,3 +32,18 @@ function(caminho){
     })
 }
 */
+
+const fs = require('fs')
+const arquivo = require('./desafio_leitura.txt')
+
+function ler(arquivo){
+    return new Promise(resolve => {
+        fs.readFile(arquivo, 'utf8', function(_, conteudo){
+            resolve(conteudo.toString())
+        })
+        console.log("depois ler")
+    })
+}
+
+ler(arquivo)
+.then(conteudo => console.log("then", conteudo))

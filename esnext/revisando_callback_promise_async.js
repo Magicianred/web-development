@@ -34,7 +34,7 @@ console.log(String(contents))
 })
 --------------------------------------------------------------------------------
 ASYNC/AWAIT
-(é uma promese só muda um pouco a sintaxe)
+(é uma promise só muda um pouco a sintaxe)
 
 
 const init = async() =>{
