@@ -32,5 +32,16 @@ const readFile = file => new Promise(resolve_promessa, rejeita_promessa) => {
 readFile('./abc.txt').then(null, contents => {
 console.log(String(contents))
 })
+--------------------------------------------------------------------------------
+ASYNC/AWAIT
+(é uma promese só muda um pouco a sintaxe)
+
+
+const init = async() =>{
+const contents = await readFile('./abc.txt')
+console.log(String(contents))
+}
+
+console.log("init", init)
 
 */
