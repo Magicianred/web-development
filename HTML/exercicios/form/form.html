@@ -3,12 +3,48 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Formulário</title>
+		<style>
+			input,
+			textarea,
+			select{
+				display:block;
+				margin-bottom: 10px;
+			}
+			input[type=radio],
+			input[type=checkbox]{
+				display: inline;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Formulário</h1>
-			<form action="http://localhost:3003/usuarios" method="post">
+			<form method="POST">
+				<input type="hidden" name="id" value="id">
 				<input type="text" name="nome">
-				<button>Incluir</button>
+				<input type="password" name="senha">
+				<textarea name="bio" rows="10" cols="32"></textarea>
+				<div>
+					<input type="radio" name="tipo" value="admin">Admin
+					<input type="radio" name="tipo" value="regular">Regular
+				</div>
+				<div>
+					<input type="checkbox" name="ativo" value="ativo">Ativo
+				</div>
+				<select name="estado">
+					<option value="sc">Santa Catarina</option>
+					<option value="sp">São Paulo</option>
+					<option value="remoto">Remoto</option>
+				</select>
+				<select name="interesses" multiple-size="3">
+					<option value="backend">backend</option>
+					<option value="frontend">frontend</option>
+					<option value="fullstack">fullstack</option>
+					<option value="redes">redes</option>
+					<option value="testes">testes</option>
+
+				</select>
+				<button formaction="http://localhost:3003/usuarios" formmethod="post">Incluir</button>
+				<button formaction="http://localhost:3003/usuarios" formmethod="post">Alterar</button>
 			</form>
 	</body>
 </html>
