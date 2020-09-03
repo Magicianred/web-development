@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Tabelas</title>
+		<style>
+			table{
+				border-collapse: collapse;
+			}
+
+			th, td{
+				padding: 10 px;
+			}
+
+			thead, tr{
+				border-bottom: solid 3px #444;
+			}
+
+			tbody tr:hover{
+				background-color: #dedede;
+			}
+
+			tfoot{
+				background-color: #444;
+				color: #fff;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<br>
+		<br>
+		<table>
+			<caption>Produtos</caption>
+			<thead>
+				<tr>
+					<th>Produto</th>
+					<th>Preço</th>
+					<th>Quantidade</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Wand of dimensions</td>
+					<td>5.000</td>
+					<td>1</td>
+					<td>5.000</td>
+				</tr>
+				<tr>
+					<td>Mana</td>
+					<td>10</td>
+					<td>250</td>
+					<td>2.500</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3">Total</td>
+					<td>7.500</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>
