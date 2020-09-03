@@ -1,31 +1,49 @@
-<h1>Projeto</h1>
-<ul class="tree">
-	<li>Backend</li>
-	<ul>
-		<li>
-			app
-			<ul>
-				<li>produto.js</li>
-				<li>usuario.js</li>
-				<li>venda.js</li>
-			</ul>
-		</li>
-		<li>config</li>
-		<ul>
-			<li>banco.js</li>
-			<li>rotas.js</li>
-			<li>servicos.js</li>
-		</ul>
-	</ul>
-	<li>Frontend</li>
-	<ul>
-		<li>public</li>
-		<ul>
-			<li>app.css</li>
-			<li>app.js</li>
-			<li>index.html</li>
-		</ul>
-	</ul>
-</ul>
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Lista aninhada</title>
+		<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+	</head>
+<body>
 
-<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<h1>Projeto</h1>
+		<ul class="tree">
+			<li>
+				<span folder>Backend</span>
+				<ul>
+					<span folder>app</span>
+					<ul>
+						<li>produto.js</li>
+						<li>usuario.js</li>
+						<li>venda.js</li>
+					</ul>
+					<span folder>config</span>
+					<ul>
+						<li>banco.js</li>
+						<li>rotas.js</li>
+						<li>servicos.js</li>
+					</ul>
+				</ul>
+				<span folder>Fronted</span>
+				<ul>
+					<span folder>public</span>
+					<ul>
+						<li>app.css</li>
+						<li>app.js</li>
+						<li>index.html</li>
+					</ul>
+				</ul>
+			</li>
+		</ul>
+			<script>
+				document.querySelectorAll("[folder]").forEach(folder => {
+					folder.addEventListener("click", function(evento){
+						const ul = folder.nextElementSibling
+						const display_mode = ul.style.display
+						ul.style.display = display_mode === 'none' ? 'block' : 'none'
+					})
+				})
+			</script>
+		</body>
+</html>
