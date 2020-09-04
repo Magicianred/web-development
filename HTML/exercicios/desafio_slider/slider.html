@@ -11,8 +11,8 @@
 			}
 			.container-fantasminhas {
   				max-width: 1000px;
-  				position: relative;
-  				margin: auto;
+  				position:absolute;
+  				margin:auto;
 			}
 		</style>
 	</head>
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<script>
-			var slideIndex = 0
+			let slideIndex = 0
 			mostrarSlides();
 			function mostrarSlides() {
 
@@ -45,7 +45,7 @@
 					slideIndex = 1
 				}
   				slides[slideIndex-1].style.display = "block";
-  				setTimeout(mostrarSlides, 2000) // Change image every 2 seconds
+  				setTimeout(mostrarSlides, 2000)
 				}
 		</script>
 	</body>
