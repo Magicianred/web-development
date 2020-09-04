@@ -2,7 +2,7 @@
 <html lang="pt" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>The Ghost Goes To The Castle</title>
+		<title>The Pixels Goes Away</title>
 		<style>
 			#ghost
 			{
@@ -16,9 +16,10 @@
 	<body>
 		<div class="container-scenario">
 			<p><button onclick="moveGhost()">Click Me</button></p>
-			<div id ="ghost">
+			<div id="ghost">
 				<img src="http://pixelartmaker.com/art/fa2761f4d243cd0.png"
 				alt="ghost pixel art" />
+			</div>
 			</div>
 		</div>
 		<script>
@@ -29,7 +30,7 @@
 				let id = setInterval(frame, 5)
 			function frame()
 			{
-				if(position == 350){
+				if(position == 450){
 					clearInterval(id)
 				}else{
 					position++
