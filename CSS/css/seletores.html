@@ -4,9 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Selectors</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="./css/tag.css">
     <style>
-        /* ... */
+		/*
+			Seletor UNIVERSAL
+        	*
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+		*/
+
+		/*
+			Seletor de CLASSE
+			.tag
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+		*/
+
+		/*
+			Seletor de ID
+			#aprovados
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			#aninhado > div
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			#aninhado section
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+		*/
+
+		/*
+			Seletor de IRMÃOS (Siblings) - Pega a tag vizinha em relação a referência
+			p + ul
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			GENERAL Siblings - pega o elemento que estiver contido dentro do mesmo pai
+			p ~ ol
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+		*/
+
+		/*
+			Seletor de ATRIBUTO
+			[feira]
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			Seletor de ATRIBUTO - Associando o valor do atributo
+			[feira=casa]
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			Seletor de ATRIBUTO - Selecionando possíveis elementos contidos
+			[feira~=escritorio]
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			Seletor de ATRIBUTO - Verifica se o valor do atributo existe
+			[feira*=sa]
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+		*/
+
+		/*
+			Seletor de FILHOS - No exemplo, pega o primeiro filho span que aparecer
+			colocar nolabel para nao atrapalhar as buscas
+			span:nth-child(1)
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+
+			Selecionar FILHOS - impares
+			section > :nth-child(odd)
+			{
+			color: #ff0;
+			background-color: #f77;
+			}
+		*/
     </style>
 </head>
 
@@ -38,7 +139,7 @@
             </div>
         </div>
     </div>
-    <script src="js/tag.js"></script>
+    <script src="./js/tag.js"></script>
 </body>
 
 </html>
