@@ -5,7 +5,56 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div{
+			font-size: 60px;
+			padding: 30px;
+			border: solid 5px rgb(0, 0, 0);
+		}
+		.static{
+			top: 100px;
+			left: 100px;
+			background-color: rgb(41, 121, 131);
+		}
+		.fixed{
+			position: fixed;
+			bottom: 30px;
+			right: 0px;
+			background-color: rgb(172, 19, 226);
+		}
+		.relative1{
+			position: relative;
+			left: 50px;
+			top: 5px;
+			background-color: rgb(22, 232, 75);
+		}
+		.absolute1{
+			position: absolute; /*leva em consideração a pagina, nao os elementos nela inseridos*/
+			left: 350px;
+			top: 120px;
+			background-color: rgb(189, 162, 20);
+		}
+		.relative2{
+			position: relative;
+			left: 250px;
+			top: 2000px;
+			width: 200px;
+			height: 200px;
+			background-color: rgb(81, 245, 210);
+		}
+		.absolute2{
+			position: absolute; /*fica absoluto em relacao a seu elemento pai */
+			left: 10px;
+			top: 10px;
+			width: 20px;
+			height: 20px;
+			background-color: rgb(228, 45, 45);
+		}
+		.sticky{
+			position: -webkit-sticky; /*serve para o safari*/
+			position: sticky;
+			background-color: rgb(170, 245, 10);
+			top: 0px;
+		}
     </style>
 </head>
 
