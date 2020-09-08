@@ -5,9 +5,22 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+	/*
+	 A tag html considera a largura inteira mas não toda a altura.
+	 A % vai sempre levar em consideração o tamanho do parent, porém,
+	 atentar a position absolute e relative
+	 Display in-line não considera altura e largura;
+	 Display block e inline-block consideram altura e largura.
+	*/
+
+	html{
+		height: 100%;
+	}
         body {
             font-size: 40px;
             background-color: coral;
+			height: 100%;
+			margin: 0px;
         }
 
         div {
@@ -17,6 +30,18 @@
         span {
             background-color: dodgerblue;
         }
+		/*
+		Por padrão o body ocupa a largura todo mas não a altura,
+		por isso é importante verificar se a altura esta em % ou em px
+		o px tende a aumentar o body.
+		*/
+
+		span, div{
+			width: 50%;
+			heigth: 100%;
+			height: 250px;
+			display: block;
+		}
     </style>
 </head>
 
