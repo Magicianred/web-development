@@ -5,13 +5,46 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        /*
+		UNIDADES ABSOLUTAS
+			[px, cm, mm]
+		*/
+		/*
+		UNIDADES BASEADAS NO VIEWPORT
+			[vh, vw, vmin, vmax]
+		*/
+		/*
+		UNIDADES BASEADAS EM FONT
+			[rem, em]
+		*/
+		/*
+		CASO ESPECIAL %
+			[viewport, font]
+		*/
+		.unidades-absolutas{
+			position: absolute;
+			font-size: 40px;
+			padding: 20px;
+			border: solid 5px rgb(37, 63, 204);
+			margin: 30px;
+			width: 4cm;
+			height: 20mm;
+			top: 20px;
+			left: 200px;
+		}
+		.unidades-relativas{
+			position: absolute;
+			font-size: 2em;
+			padding: 5%;
+			border: solid 1vm #222;
+
+		}
     </style>
 </head>
 
 <body>
-    <div class="unidades-absolutas">Opa!</div>
-    <div class="unidades-relativas">Epa!</div>
+    <div class="unidades-absolutas">Small</div>
+    <div class="unidades-relativas">Notes</div>
 </body>
 
 </html>
