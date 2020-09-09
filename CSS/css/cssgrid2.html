@@ -11,7 +11,7 @@
             height: calc(100% - 40px);
             background-color: lightgray;
         }
-        
+
         div {
             display: flex;
             align-items: center;
@@ -20,6 +20,23 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+		body{
+			display: grid;
+			/*dar nome as colunas*/
+			grid-template-columns: [inicio] 1fr [metade metade-da-laranja] 1fr [fim] 1fr;
+			grid-template-rows: repeat(3, 1fr);
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+			/*linha coluna de uma vez so na declaracao*/
+			grid-gap: 20px 10px;
+			/* se nao por o segundo valor ele atribui o mesmo valor de gap pra linha e coluna*/
+			grid-gap: 10px;
+			/*grid-area*/
+		}
+		.d1{
+			grid-column-start: metade;
+			grid-column-end: fim;
+		}
     </style>
 </head>
 
