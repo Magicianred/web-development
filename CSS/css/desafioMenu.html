@@ -7,59 +7,100 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+		*{
+			box-sizing: border-box;
+		}
         body{
 			background-color: rgb(161, 161, 161);
+			margin: 0;
 		}
 		header{
-			display: flex;
+			display: inline;
 		}
 		.cabecalho{
-			display: inline-block;
+			display: block;
 			background-color: rgb(61, 70, 71);
 			position: sticky;
 			border-bottom: solid 5px rgb(42, 167, 180);
-			align-items: center;
 			margin: 0px;
+			height: 150px;
+			box-sizing: content-box;
 			padding: 0px;
 		}
 		.logo{
 			display: inline-block;
-		}
-		.menu{
-			display: inline;
-			position: relative;
-		}
-		ul, li{
-			display: inline;
-			font-size: 16px;
-			font-weight: bold;
+			height: 80px;
 			padding: 15px;
 		}
-		a{
+		.logo img{
+			height: 100%;
+		}
+		.menu{
+			display: inline-block;
+			vertical-align: top;
+			height: 80px;
+			padding: 25px;
+		}
+		.menu ul{
+		   padding: 0px;
+		   margin: 0;
+		}
+		.menu li{
+			display: inline-block;
+		}
+		.menu a{
 			color: rgb(255, 255, 255);
 			text-decoration: none;
 			text-align: right;
+			font-size: 1.2em;
+			font-weight: bold;
+			padding: 15px;
+		}
+		.menu a:hover,
+		.menu a.selected{
+			background-color: rgb(42, 167, 180);
+			color: rgb(0, 0, 0);
 		}
 		.autenticacao{
-			display: inline-block;
-			text-align: right;
+			float: right;
+			height: 80px;
 			padding: 10px;
+		}
+		.autenticacao a{
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+			text-align: right;
+			font-size: 1.2em;
 			font-weight: bold;
-			margin-left: 500px;
 		}
 		.botao{
 			display: inline-block;
 			text-align: right;
 			font-weight: bold;
 			padding: 10px;
-			border-radius: 20px;
+			border-radius: 30px;
 			background-color: rgb(218, 11, 36);
-			margin-left: 5px;
+			margin: 10px;
 
 		}
-		@media(max-width: 600px){
+
+		@media(min-width: 679px){
 			.menu-toggle{
-				display: inline;
+				float: right;
+				display: none;
+				padding: 15px;
+				background-color: rgb(139, 148, 147);
+				margin-top: 1em;
+				}
+		}
+		@media(max-width: 680px){
+			.menu{
+				display: none;
+			}
+		}
+		@media(max-width: 910px){
+			.autenticacao{
+				display: none;
 			}
 		}
     </style>
@@ -98,7 +139,14 @@
     </header>
 
     <script>
-        // ...
+        window.onhashchange = function(evento){
+			const oldURL = evento.oldURL.split('#')[1]
+			const newURL = evento.newURL.split('#')[1]
+			const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+			const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+			oldMenu && oldMenu.classList.remove('selected')
+			newMenu && newMenu.classList.add('selected')
+		}
     </script>
 </body>
 
