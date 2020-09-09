@@ -6,14 +6,14 @@
     <title>CSS Grid #01</title>
     <style>
         /* https://caniuse.com/#feat=css-grid */
-        
+
         html,
         body {
             margin: 20px;
             height: calc(100% - 40px);
             background-color: lightgray;
         }
-        
+
         div {
             display: flex;
             align-items: center;
@@ -22,6 +22,39 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+		/* grid por default é bidimensional, ao contrário do flexbox que é
+		unidirecional, e é necessário definir se o main axis é a linha (row)
+		ou a coluna(column)*/
+		body{
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+			/* 4 colunas ocupando 8.33%*/
+			grid-template-columns: repeat(4, 8.33%);
+			grid-template-columns: repeat(11, 100px) 100px;
+			/* inserir valores min e máximos com minMax 100px, 300px */
+			grid-template-columns: 200px 20% 1fr;
+		}
+		.d8{
+			grid-column-start: 2;
+			grid-column-end: 4;
+			grid-column-end: span 2;
+			grid-row-start: 3;
+			grid-row-end: 5;
+		}
+		.d10, .d11{
+			/*pode ter sobreposição de grids*/
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 5;
+			grid-row-end: span 1;
+		}
+		.d10{
+			/*eixo z seria a profundidade, quanto mais positivo, mais acima dos
+			outros componentes estará, e quanto menos o valor (inclui negativo)
+			mais profundo estará;*/
+			z-index:10;
+		}
     </style>
 </head>
 
