@@ -9,8 +9,18 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
+    <script>
+        document.querySelector('#primeiro').classList.add('destaque')
+
+		const selecionar = seletor =>
+		document.querySelectorAll(seletor).forEach(elemento => elemento.classList.add('destaque'))
+
+		const deselecionar = seletor =>
+		document.querySelectorAll(seletor).forEach(elemento => elemento.classList.remove('destaque'))
+
+		selecionar('div')
+
+		deselecionar('div')
     </script>
 </body>
 </html>
