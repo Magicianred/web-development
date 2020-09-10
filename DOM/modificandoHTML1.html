@@ -9,7 +9,31 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+		const div_1 = document.createElement('div')
+		div_1.classList.add('destaque')
+		div_1.innerHTML = 'Primeiro'
+
+		const div_2 = document.createElement('div')
+		div_2.setAttribute('wm-atributo', 'valor')
+		div_2.innerHTML = 'Segundo'
+
+		const p = document.createElement('p')
+		p.innerHTML = 'Terceiro'
+
+		const div_3 = document.createElement('div')
+		div_3.appendChild(p)
+
+		body.appendChild(div_1)
+		body.appendChild(div_2)
+		body.appendChild(div_3)
+
+		const texto = document.createTextNode('Antes...')
+		div_3.insertBefore(texto, div_3.childNodes[0])
+
+		const div_4 = div_3.cloneNode(true)
+		body.appendChild(div_4)
     </script>
 </body>
 
