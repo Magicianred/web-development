@@ -21,6 +21,19 @@
 		selecionar('div')
 
 		deselecionar('div')
+
+		selecionar('.terceiro.ultimo')
+
+		deselecionar('*')
+		selecionar(':not(#primeiro)')
+		deselecionar('*')
+		selecionar(':nth-child(1)')
+		deselecionar('*')
+		/*selecionando a primeira div*/
+		selecionar('div:nth-of-type(1)')
+		deselecionar('*')
+		/*selecionando atributo*/
+		selecionar('[wb-attrib]')
     </script>
 </body>
 </html>
