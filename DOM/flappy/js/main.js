@@ -17,7 +17,12 @@ function animate(){
 	handleObstacles();
 	dragon.update();
 	dragon.draw();
+	ctx.fillStyle = 'red';
+	ctx.font = '90px Georgia';
+	ctx.strokeText(score, 450, 70);
+	ctx.fillText(score, 450, 70);
 	handleParticles();
+	if(handleCollision()) return;
 	handleCollision();
 	requestAnimationFrame(animate);
 	angle+= 0.25;
@@ -44,6 +49,9 @@ function handleCollision(){
 		(dragon.y > canvas.height - obstaclesArray[i].bottom &&
 		dragon.y + dragon.height < canvas.height))){
 			ctx.drawImage(collision, dragon.x, dragon.y, 50, 50)
+			ctx.font = '25px Georgia';
+			ctx.fillStyle = 'black';
+			ctx.fillText('Game Over. Your score is: ' + score, 160, canvas.height/2 - 10);
 			return true
 		}
 	}

@@ -7,6 +7,7 @@ class Obstacle{
 		this.x = canvas.width;
 		this.width = 20;
 		this.color = 'hsla(' + hue + ', 100%, 50%, 1)';
+		this.counter = false;
 	}
 	draw(){
 		ctx.fillStyle = this.color;
@@ -15,6 +16,10 @@ class Obstacle{
 	}
 	update(){
 		this.x -= gamespeed;
+		if(!this.counter && this.x < dragon.x){
+			score++
+			this.counter = true
+		}
 		this.draw();
 	}
 }
