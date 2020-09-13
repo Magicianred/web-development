@@ -14,12 +14,14 @@ let gamespeed =  2;
 function animate(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	//ctx.fillRect(10, canvas.height - 90, 50, 50);
+	handleObstacles();
 	dragon.update();
 	dragon.draw();
-	handleParticles()
+	handleParticles();
 	requestAnimationFrame(animate);
 	angle+= 0.25;
 	hue++;
+	frame++;
 }
 animate();
 
