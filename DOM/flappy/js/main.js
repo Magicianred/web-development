@@ -16,8 +16,9 @@ function animate(){
 	//ctx.fillRect(10, canvas.height - 90, 50, 50);
 	dragon.update();
 	dragon.draw();
+	handleParticles()
 	requestAnimationFrame(animate);
-	angle++;
+	angle+= 0.25;
 }
 animate();
 

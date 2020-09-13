@@ -8,9 +8,9 @@ class Dragon{
 		this.weight = 1;
 	}
 	update(){
-		let curve =  Math.sin(angle);
-		if(this.y > canvas.height - this.height * 3){
-			this.y = canvas.height - (this.height * 3)
+		let curve =  Math.sin(angle) * 3;
+		if(this.y > canvas.height - (this.height * 3) + curve){
+			this.y = canvas.height - (this.height * 3) + curve
 			this.velocitY = 0;
 		} else {
 			this.velocitY += this.weight;
@@ -21,7 +21,7 @@ class Dragon{
 			this.y = 0 + this.height;
 			this.velocitY = 0;
 		}
-		if(spacePressed) this.flap();
+		if(spacePressed && this.y > this.height * 3) this.flap();
 		}
 	draw(){
 		ctx.fillStyle = 'green';
