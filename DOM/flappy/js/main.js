@@ -19,6 +19,7 @@ function animate(){
 	handleParticles()
 	requestAnimationFrame(animate);
 	angle+= 0.25;
+	hue++;
 }
 animate();
 

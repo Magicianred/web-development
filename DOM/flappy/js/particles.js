@@ -6,7 +6,7 @@ class Particle{
 		this.y = dragon.y;
 		this.size = Math.random() * 7 + 3;
 		this.speedY = (Math.random() * - 1) - 0.5;
-		this.color = 'gold';
+		this.color = 'hsla(' + hue + ', 100%, 50%, 0.8)';
 	}
 	update(){
 		this.x -= gamespeed;
