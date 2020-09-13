@@ -18,6 +18,7 @@ function animate(){
 	dragon.update();
 	dragon.draw();
 	handleParticles();
+	handleCollision();
 	requestAnimationFrame(animate);
 	angle+= 0.25;
 	hue++;
@@ -32,3 +33,18 @@ window.addEventListener('keydown', function(evento){
 window.addEventListener('keyup', function(evento){
 	if(evento.code === 'Space') spacePressed = false;
 });
+
+const collision = new Image();
+collision.src = 'imgs/pow.png'
+function handleCollision(){
+	for(let i = 0; i < obstaclesArray.length; i ++){
+		if(dragon.x < obstaclesArray[i].x + obstaclesArray[i].width &&
+		dragon.x + dragon.width > obstaclesArray[i].x &&
+		((dragon.y < 0 + obstaclesArray[i].top && dragon.y + dragon.height > 0) ||
+		(dragon.y > canvas.height - obstaclesArray[i].bottom &&
+		dragon.y + dragon.height < canvas.height))){
+			ctx.drawImage(collision, dragon.x, dragon.y, 50, 50)
+			return true
+		}
+	}
+}
