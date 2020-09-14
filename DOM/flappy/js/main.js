@@ -11,9 +11,29 @@ let score =  0;
 let gamespeed =  2;
 
 
+const background = new Image();
+background.src = 'imgs/sea-background.png'
+const bg = {
+	axis_x_1: 0,
+	axis_x_2: canvas.width,
+	axis_y_1: 0,
+	width: canvas.width,
+	height: canvas.height
+}
+
+function handleBackground(){
+	if(bg.axis_x_1 <= -bg.width){
+		bg.axis_x_1 = bg.width
+	}else{
+		bg.axis_x_1 -= gamespeed;
+	}
+	ctx.drawImage(background, bg.axis_x_1, bg.axis_y_1, bg.width, bg.height);
+}
+
 function animate(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	//ctx.fillRect(10, canvas.height - 90, 50, 50);
+	handleBackground();
 	handleObstacles();
 	dragon.update();
 	dragon.draw();
