@@ -30,10 +30,10 @@ class Tainha{
 		if(spacePressed && this.y > this.height * 3) this.flap();
 		}
 	draw(){
-		ctx.fillStyle = 'silver';
+		//ctx.fillStyle = 'silver';
 		//ctx.fillRect(this.x, this.y, this.width, this.height);
 		ctx.drawImage(tainhaSprite, this.frameX * this.width, 0, this.originalWidth, this.originalHeight,
-		this.x - 20, this.y - 30, this.width * 1.7, this.height * 1.7);
+		this.x - 30, this.y - 30, this.width * 1.7, this.height * 1.7);
 	}
 	flap(){
 		this.velocitY -= 2;
