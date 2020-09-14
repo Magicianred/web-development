@@ -11,7 +11,6 @@ class Tainha{
 		this.width = this.originalWidth/20;
 		this.height = this.originalHeight/20;
 		this.weight = 1;
-		this.frameX = 0;
 	}
 	update(){
 		let curve =  Math.sin(angle) * 3;
@@ -32,16 +31,11 @@ class Tainha{
 	draw(){
 		//ctx.fillStyle = 'silver';
 		//ctx.fillRect(this.x, this.y, this.width, this.height);
-		ctx.drawImage(tainhaSprite, this.frameX * this.width, 0, this.originalWidth, this.originalHeight,
+		ctx.drawImage(tainhaSprite, 0, 0, this.originalWidth, this.originalHeight,
 		this.x - 30, this.y - 30, this.width * 1.7, this.height * 1.7);
 	}
 	flap(){
 		this.velocitY -= 2;
-		if(this.frameX >= 3){
-			this.frameX = 0;
-		}else{
-			this.frameX++;
-		}
 	}
 }
 

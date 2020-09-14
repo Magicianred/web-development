@@ -63,7 +63,6 @@ window.addEventListener('keydown', function(evento){
 
 window.addEventListener('keyup', function(evento){
 	if(evento.code === 'Space') spacePressed = false;
-	tainha.frameX = 0;
 });
 
 const collision = new Image();
@@ -78,7 +77,7 @@ function handleCollision(){
 			ctx.drawImage(collision, tainha.x, tainha.y, 50, 50)
 			ctx.font = '25px Georgia';
 			ctx.fillStyle = 'white';
-			ctx.fillText('The shinning tainha is dead. Score: ' + score, 160, canvas.height/2 - 10);
+			ctx.fillText('The tainha is dead. Score: ' + score, 160, canvas.height/2 - 10);
 			return true
 		}
 	}
