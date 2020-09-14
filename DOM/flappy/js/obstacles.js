@@ -16,7 +16,7 @@ class Obstacle{
 	}
 	update(){
 		this.x -= gamespeed;
-		if(!this.counter && this.x < dragon.x){
+		if(!this.counter && this.x < tainha.x){
 			score++
 			this.counter = true
 		}

@@ -22,12 +22,18 @@ const bg = {
 }
 
 function handleBackground(){
-	if(bg.axis_x_1 <= -bg.width){
+	if(bg.axis_x_1 <= -bg.width + gamespeed){
 		bg.axis_x_1 = bg.width
 	}else{
 		bg.axis_x_1 -= gamespeed;
 	}
+	if(bg.axis_x_2 <= -bg.width + gamespeed){
+		bg.axis_x_2 = bg.width
+	}else{
+		bg.axis_x_2 -= gamespeed;
+	}
 	ctx.drawImage(background, bg.axis_x_1, bg.axis_y_1, bg.width, bg.height);
+	ctx.drawImage(background, bg.axis_x_2, bg.axis_y_1, bg.width, bg.height);
 }
 
 function animate(){
@@ -35,8 +41,8 @@ function animate(){
 	//ctx.fillRect(10, canvas.height - 90, 50, 50);
 	handleBackground();
 	handleObstacles();
-	dragon.update();
-	dragon.draw();
+	tainha.update();
+	tainha.draw();
 	ctx.fillStyle = 'red';
 	ctx.font = '90px Georgia';
 	ctx.strokeText(score, 450, 70);
@@ -57,21 +63,22 @@ window.addEventListener('keydown', function(evento){
 
 window.addEventListener('keyup', function(evento){
 	if(evento.code === 'Space') spacePressed = false;
+	tainha.frameX = 0;
 });
 
 const collision = new Image();
 collision.src = 'imgs/pow.png'
 function handleCollision(){
 	for(let i = 0; i < obstaclesArray.length; i ++){
-		if(dragon.x < obstaclesArray[i].x + obstaclesArray[i].width &&
-		dragon.x + dragon.width > obstaclesArray[i].x &&
-		((dragon.y < 0 + obstaclesArray[i].top && dragon.y + dragon.height > 0) ||
-		(dragon.y > canvas.height - obstaclesArray[i].bottom &&
-		dragon.y + dragon.height < canvas.height))){
-			ctx.drawImage(collision, dragon.x, dragon.y, 50, 50)
+		if(tainha.x < obstaclesArray[i].x + obstaclesArray[i].width &&
+		tainha.x + tainha.width > obstaclesArray[i].x &&
+		((tainha.y < 0 + obstaclesArray[i].top && tainha.y + tainha.height > 0) ||
+		(tainha.y > canvas.height - obstaclesArray[i].bottom &&
+		tainha.y + tainha.height < canvas.height))){
+			ctx.drawImage(collision, tainha.x, tainha.y, 50, 50)
 			ctx.font = '25px Georgia';
-			ctx.fillStyle = 'black';
-			ctx.fillText('Game Over. Your score is: ' + score, 160, canvas.height/2 - 10);
+			ctx.fillStyle = 'white';
+			ctx.fillText('The shinning tainha is dead. Score: ' + score, 160, canvas.height/2 - 10);
 			return true
 		}
 	}
